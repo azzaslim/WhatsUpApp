@@ -132,6 +132,7 @@ export default function MyProfil(props) {
       const ref_unProfil = ref_tableProfils.child(currentId);
 
       await ref_unProfil.update({
+        id:currentId,
         nom,
         pseudo,
         telephone,
@@ -221,8 +222,7 @@ color: "#000" }]}
 
         <TouchableHighlight
           onPress={handleSave}
-          style={[layout.button, styles.saveButton, { backgroundColor:
-isModified ? backgroundColor : "pink" }]} 
+          style={[layout.button, styles.saveButton, { backgroundColor : "pink" }]} 
           underlayColor={isModified ? colors.buttonColor : "pink"}
           disabled={!isModified} // Désactive le bouton si non modifié
         >
