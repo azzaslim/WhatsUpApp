@@ -65,6 +65,7 @@ export default function Home(props) {
       <Tab.Screen
         name="Group"
         component={Group}
+        initialParams={{ currentId: currentId }}
         options={{
           tabBarLabel: "Groupes", // Label de l'onglet
           tabBarIcon: ({ color }) => (
